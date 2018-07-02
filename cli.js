@@ -2,6 +2,8 @@
 'use strict';
 const meow = require('meow');
 
+const git = require('simple-git');
+
 const cli = meow(`
 	Usage
 	  $ g [input]
