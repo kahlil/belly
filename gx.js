@@ -11,6 +11,6 @@ module.exports = cli => {
   if (isEmptyArray(cli.input)) {
     git()
       .add('.')
-      .commit('gx auto-commit');
+      .commit('gx auto-commit', () => console.log('gx commited your code'));
   }
 };
