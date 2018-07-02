@@ -1,20 +1,4 @@
-# gx-cli
-
-> A better Git experience for common tasks.
-
-
-## Install
-
-```
-$ npm install --global gx-cli
-```
-
-
-## Usage
-
-```
-$ gx --help
-
+module.exports = `
   Usage
     $ gx [branch name]
 
@@ -49,9 +33,4 @@ $ gx --help
     Tag and annotate the current commit with a version number
     and push the tag to origin
     $ gx -t "1.4.5"
-```
-
-
-## License
-
-MIT © [Kahlil Lechelt](https://github.com/kahlil)
+`;

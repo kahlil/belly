@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"license": "MIT",
-	"repository": "kahlil/g",
+	"repository": "gx-cli",
 	"author": {
 		"name": "Kahlil Lechelt",
 		"email": "hello@kahlil.info",
@@ -27,6 +27,7 @@
 		"git"
 	],
 	"dependencies": {
+		"chalk": "^2.4.1",
 		"meow": "^5.0.0",
 		"simple-git": "^1.96.0"
 	},

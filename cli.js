@@ -1,23 +1,11 @@
 #!/usr/bin/env node
 'use strict';
+
 const meow = require('meow');
+const gx = require('./gx');
+const helpText = require('./help-text');
 
-const git = require('simple-git');
+const cli = meow(helpText);
 
-const cli = meow(`
-	Usage
-	  $ g [input]
-
-	Options
-	  --foo  Lorem ipsum [Default: false]
-
-	Examples
-	  $ g
-	  unicorns & rainbows
-	  $ g ponies
-	  ponies & rainbows
-`);
-
-git().checkout('-');
-
-console.log(cli.input[0] || 'unicorns');
+gx();
+console.log(cli.input || 'unicorns');
