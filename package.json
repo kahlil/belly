@@ -1,9 +1,9 @@
 {
-	"name": "@kahlil/gx",
+	"name": "gx-cli",
 	"version": "1.0.0",
 	"description": "",
 	"license": "MIT",
-	"repository": "gx-cli",
+	"repository": "kahlil/gx-cli",
 	"author": {
 		"name": "Kahlil Lechelt",
 		"email": "hello@kahlil.info",
