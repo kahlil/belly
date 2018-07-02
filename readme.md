@@ -1,6 +1,6 @@
 # gx-cli
 
-> A better Git experience for common tasks.
+> A better Git ClI for common tasks.
 
 
 ## Install

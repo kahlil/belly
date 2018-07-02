@@ -7,5 +7,4 @@ const helpText = require('./help-text');
 
 const cli = meow(helpText);
 
-gx();
-console.log(cli.input || 'unicorns');
+gx(cli);
