@@ -18,4 +18,6 @@ const cli = meow(`
 	  ponies & rainbows
 `);
 
+git().checkout('-');
+
 console.log(cli.input[0] || 'unicorns');
