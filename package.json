@@ -1,0 +1,38 @@
+{
+	"name": "@kahlil/gx",
+	"version": "1.0.0",
+	"description": "",
+	"license": "MIT",
+	"repository": "kahlil/g",
+	"author": {
+		"name": "Kahlil Lechelt",
+		"email": "hello@kahlil.info",
+		"url": "https://www.kahlillechelt.com"
+	},
+	"bin": {
+		"gx": "cli.js"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"cli.js"
+	],
+	"keywords": [
+		"cli",
+		"cli-app",
+		"git"
+	],
+	"dependencies": {
+		"meow": "^5.0.0",
+		"simple-git": "^1.96.0"
+	},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"execa": "^0.10.0",
+		"xo": "^0.21.0"
+	}
+}
