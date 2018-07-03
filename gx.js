@@ -1,11 +1,11 @@
 const git = require('simple-git');
 
 module.exports = cli => {
-  const commitMessage = cli.flags.message || 'gx auto-commit';
+  const {commitMessage} = cli.flags;
   if (isEmptyArray(cli.input)) {
     git()
       .add('.')
-      .commit(commitMessage, () => console.log('gx commited your code'));
+      .commit(commitMessage, () => console.log(commitMessage));
   }
 };
 
