@@ -21,7 +21,7 @@ function addAllCommitAndPush(commitMessage) {
   git()
     .add('.')
     .commit(
-      `${blueGx}: ${commitMessage}`,
+      `gx: ${commitMessage}`,
       (err, data) => {
         if (err) {
           throw new Error(`  💥 ${blueGx}: something went wrong.`);
