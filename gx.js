@@ -24,10 +24,10 @@ function addAllCommitAndPush(commitMessage) {
       `${blueGx}: ${commitMessage}`,
       (err, data) => {
         if (err) {
-          console.error(`💥 ${blueGx}: something went wrong.`);
+          console.error(`/t💥 ${blueGx}: something went wrong.`);
           return;
         }
-        console.info(`✨ ${blueGx}: commit executed with data`, data);
+        console.info(`/t✨ ${blueGx}: commit executed with data`, data);
       }
     );
 }
