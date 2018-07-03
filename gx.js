@@ -2,6 +2,11 @@ const git = require('simple-git');
 const chalk = require('chalk');
 
 const blueGx = chalk.blue('gx');
+const texts = {
+  genericError: `  💥 ${blueGx}: something went wrong.`,
+  commitSuccess: `  ✨ ${blueGx}: commit executed with data`,
+};
+
 
 module.exports = async cli => {
   const {commitMessage} = cli.flags;
@@ -24,9 +29,9 @@ function addAllCommitAndPush(commitMessage) {
       `gx: ${commitMessage}`,
       (err, data) => {
         if (err) {
-          throw new Error(`  💥 ${blueGx}: something went wrong.`);
+          throw new Error(texts.genericError);
         }
-        console.info(`  ✨ ${blueGx}: commit executed with data`, data.summary);
+        console.info(texts.commitSuccess, data.summary);
       }
     );
 }
