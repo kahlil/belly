@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const blueGx = chalk.blue('gx');
 const texts = {
   genericError: `  💥 ${blueGx}: something went wrong.`,
-  commitSuccess: `  ✨ ${blueGx}: commit executed with data`,
+  commitSuccess: `  ✨ ${blueGx}: commit executed`
 };
 
 
@@ -27,11 +27,20 @@ function addAllCommitAndPush(commitMessage) {
     .add('.')
     .commit(
       `gx: ${commitMessage}`,
-      (err, data) => {
+      err => {
         if (err) {
           throw new Error(texts.genericError);
         }
-        console.info(texts.commitSuccess, data.summary);
+        console.info(texts.commitSuccess);
+      }
+    )
+    .push(
+      ['-u', 'origin', 'master'],
+      (err, data) => {
+        if (err) {
+          throw new Error(err);
+        }
+        console.log(data);
       }
     );
 }
