@@ -1,11 +1,20 @@
 const git = require('simple-git');
 
-module.exports = cli => {
+module.exports = async cli => {
   const {commitMessage} = cli.flags;
   if (isEmptyArray(cli.input)) {
     git()
       .add('.')
-      .commit(commitMessage, () => console.log(commitMessage));
+      .commit(
+        commitMessage,
+        (err, data) => {
+          if (err) {
+            console.error('💥 gx: something went wrong.');
+            return;
+          }
+          console.info('✨ gx: commit executed with data', data);
+        }
+      );
   }
 };
 
