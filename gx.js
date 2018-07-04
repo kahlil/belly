@@ -8,9 +8,9 @@ const commitSpinner = ora(`${blueGx}: Committing latest changes`);
 const pushSpinner = ora(`${blueGx}: Pushing latest changes`);
 
 const texts = {
-  genericError: `💥 ${blueGx}: something went wrong.`,
-  commitSuccess: `${blueGx}: commit executed`,
-  pushSuccess: `${blueGx}: latest commit was pushed to origin`
+  genericError: `💥 ${blueGx}: Something went wrong.`,
+  commitSuccess: `${blueGx}: Changes committed`,
+  pushSuccess: `${blueGx}: Latest commit was pushed to origin`
 };
 
 module.exports = async cli => {
