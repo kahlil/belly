@@ -2,10 +2,11 @@ const git = require('simple-git');
 const chalk = require('chalk');
 const ora = require('ora');
 
-const commitSpinner = ora('Committing latest changes');
-const pushSpinner = ora('Pushing latest changes');
-
 const blueGx = chalk.blue('gx');
+
+const commitSpinner = ora(`${blueGx}: Committing latest changes`);
+const pushSpinner = ora(`${blueGx}: Pushing latest changes`);
+
 const texts = {
   genericError: `💥 ${blueGx}: something went wrong.`,
   commitSuccess: `${blueGx}: commit executed`,
