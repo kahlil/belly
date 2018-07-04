@@ -3,10 +3,8 @@ const chalk = require('chalk');
 const ora = require('ora');
 
 const blueGx = chalk.blue('gx');
-
 const commitSpinner = ora(`${blueGx}: Committing latest changes`);
 const pushSpinner = ora(`${blueGx}: Pushing latest changes`);
-
 const texts = {
   genericError: `💥 ${blueGx}: Something went wrong.`,
   commitSuccess: `${blueGx}: Changes committed`,
@@ -32,7 +30,7 @@ function addAllCommitAndPush(commitMessage) {
   git()
     .add('.')
     .commit(
-      `gx: ${commitMessage}`,
+      commitMessage,
       err => {
         if (err) {
           throw new Error(texts.genericError);
@@ -42,7 +40,6 @@ function addAllCommitAndPush(commitMessage) {
       }
     )
     .push(
-      ['origin', 'master'],
       err => {
         if (err) {
           throw new Error(err);

@@ -9,7 +9,7 @@ const config = {
   flags: {
     commitMessage: {
       type: 'string',
-      default: `auto-commit`,
+      default: `gx auto-commit`,
       alias: 'm'
     }
   }
