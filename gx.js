@@ -4,9 +4,9 @@ const chalk = require('chalk');
 const blueGx = chalk.blue('gx');
 const texts = {
   genericError: `💥 ${blueGx}: something went wrong.`,
-  commitSuccess: `✨ ${blueGx}: commit executed`
+  commitSuccess: `✨ ${blueGx}: commit executed`,
+  pushSuccess: `✨ ${blueGx}: latest commit was pushed to origin`
 };
-
 
 module.exports = async cli => {
   const {commitMessage} = cli.flags;
