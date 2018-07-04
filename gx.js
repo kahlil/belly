@@ -35,7 +35,7 @@ function addAllCommitAndPush(commitMessage) {
       }
     )
     .push(
-      ['-u', 'origin', 'master'],
+      ['origin', 'master'],
       (err, data) => {
         if (err) {
           throw new Error(err);
