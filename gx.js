@@ -8,8 +8,8 @@ const pushSpinner = ora('Pushing latest changes');
 const blueGx = chalk.blue('gx');
 const texts = {
   genericError: `💥 ${blueGx}: something went wrong.`,
-  commitSuccess: `✨ ${blueGx}: commit executed`,
-  pushSuccess: `✨ ${blueGx}: latest commit was pushed to origin`
+  commitSuccess: `${blueGx}: commit executed`,
+  pushSuccess: `${blueGx}: latest commit was pushed to origin`
 };
 
 module.exports = async cli => {
@@ -36,8 +36,7 @@ function addAllCommitAndPush(commitMessage) {
         if (err) {
           throw new Error(texts.genericError);
         }
-        console.info(texts.commitSuccess);
-        commitSpinner.succeed();
+        commitSpinner.succeed(texts.commitSuccess);
         pushSpinner.start();
       }
     )
@@ -47,8 +46,7 @@ function addAllCommitAndPush(commitMessage) {
         if (err) {
           throw new Error(err);
         }
-        console.log(texts.pushSuccess);
-        pushSpinner.succeed();
+        pushSpinner.succeed(texts.pushSuccess);
       }
     );
 }
