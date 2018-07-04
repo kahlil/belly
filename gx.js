@@ -40,7 +40,7 @@ function addAllCommitAndPush(commitMessage) {
         if (err) {
           throw new Error(err);
         }
-        console.log(data);
+        console.log(texts.pushSuccess);
       }
     );
 }
