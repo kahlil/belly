@@ -3,8 +3,8 @@ const chalk = require('chalk');
 
 const blueGx = chalk.blue('gx');
 const texts = {
-  genericError: `  💥 ${blueGx}: something went wrong.`,
-  commitSuccess: `  ✨ ${blueGx}: commit executed`
+  genericError: `💥 ${blueGx}: something went wrong.`,
+  commitSuccess: `✨ ${blueGx}: commit executed`
 };
 
 
@@ -38,7 +38,7 @@ function addAllCommitAndPush(commitMessage) {
       ['-u', 'origin', 'master'],
       (err, data) => {
         if (err) {
-          // throw new Error(err);
+          throw new Error(err);
         }
         console.log(data);
       }
