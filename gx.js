@@ -1,5 +1,9 @@
 const git = require('simple-git');
 const chalk = require('chalk');
+const ora = require('ora');
+
+const commitSpinner = ora('Committing latest changes');
+const pushSpinner = ora('Pushing latest changes');
 
 const blueGx = chalk.blue('gx');
 const texts = {
@@ -23,6 +27,7 @@ function isEmptyArray(arr) {
 }
 
 function addAllCommitAndPush(commitMessage) {
+  commitSpinner.start();
   git()
     .add('.')
     .commit(
@@ -32,15 +37,18 @@ function addAllCommitAndPush(commitMessage) {
           throw new Error(texts.genericError);
         }
         console.info(texts.commitSuccess);
+        commitSpinner.succeed();
+        pushSpinner.start();
       }
     )
     .push(
       ['origin', 'master'],
-      (err, data) => {
+      err => {
         if (err) {
           throw new Error(err);
         }
         console.log(texts.pushSuccess);
+        pushSpinner.succeed();
       }
     );
 }
