@@ -38,6 +38,9 @@
 		"xo": "^0.21.0"
 	},
 	"xo": {
-		"space": true
+    "space": true,
+    "rules": {
+      "unicorn/no-process-exit": false
+    }
 	}
 }
