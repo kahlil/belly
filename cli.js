@@ -3,7 +3,7 @@
 
 const meow = require('meow');
 const gx = require('./lib/gx');
-const helpText = require('./lib/help-text');
+const {cliHelp} = require('./lib/texts');
 
 const config = {
   flags: {
@@ -15,6 +15,6 @@ const config = {
   }
 };
 
-const cli = meow(helpText, config);
+const cli = meow(cliHelp, config);
 
 gx(cli);
