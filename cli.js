@@ -2,8 +2,8 @@
 'use strict';
 
 const meow = require('meow');
-const gx = require('./gx');
-const helpText = require('./help-text');
+const gx = require('./lib/gx');
+const helpText = require('./lib/help-text');
 
 const config = {
   flags: {
