@@ -16,7 +16,7 @@ $ npm install --global belly
 $ belly --help
 
   Usage
-    $ belly [c | s | t | r | n]
+    $ belly [c | s | t | r | n | q]
 
   Options
     --help                           Display this message
@@ -42,7 +42,7 @@ $ belly --help
     $ belly n <new-branch-name>
 
     Squash all commits since master
-    $ belly q
+    $ belly q -m "<commit-message>"
 ```
 
 
