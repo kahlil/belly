@@ -2,7 +2,7 @@
 'use strict';
 
 const meow = require('meow');
-const gx = require('./lib/gx');
+const gx = require('./lib/belly');
 const {cliHelp} = require('./lib/texts');
 
 const config = {

@@ -1,9 +1,9 @@
 {
-	"name": "gx-cli",
+	"name": "belly",
 	"version": "1.0.0",
 	"description": "",
 	"license": "MIT",
-	"repository": "kahlil/gx-cli",
+	"repository": "kahlil/belly",
 	"author": {
 		"name": "Kahlil Lechelt",
 		"email": "hello@kahlil.info",

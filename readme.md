@@ -1,45 +1,48 @@
-# gx-cli
+# belly
 
-> A better Git ClI for common tasks.
+> Git shortcuts for common tasks.
 
 
 ## Install
 
 ```
-$ npm install --global gx-cli
+$ npm install --global belly
 ```
 
 
 ## Usage
 
 ```
-$ gx --help
+$ belly --help
 
   Usage
-    $ gx [branch name]
+    $ belly [c | s | t | r | n]
 
   Options
     --help                           Display this message
     --message -m "<commit message>"  Add a custom commit message
-    --tag -t "<new version number>"  Tag and annotate the current commit with
-                                     the passed version number
-    --rename -r "<new branch name>"  Rename the branch locally and remote
 
   Examples
     Commit all staged and unstaged changes with a generic
     commit message and push the commit to origin
-    $ gx
+    $ belly c
 
     Commit all staged and unstaged changes with a custom
     commit message and push the commit to origin
-    $ gx -m "Made some awesome changes"
+    $ belly c -m "Made some awesome changes"
 
-    Swith to last branch
-    $ gx -
+    Switch to last branch or switch to / create a branch with a specific name
+    $ belly s [<branch-name>]
 
     Tag and annotate the current commit with a version number
     and push the tag to origin
-    $ gx t 1.4.5
+    $ belly t <version-number>
+
+    Rename the current branch locally and on origin
+    $ belly n <new-branch-name>
+
+    Squash all commits since master
+    $ belly q
 ```
 
 
