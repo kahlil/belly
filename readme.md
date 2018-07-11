@@ -16,7 +16,7 @@ $ npm install --global belly
 $ belly --help
 
   Usage
-    $ belly [c | s | t | r | n | q]
+    $ belly [c | s | t | n | q]
 
   Options
     --help                           Display this message
@@ -31,18 +31,18 @@ $ belly --help
     commit message and push the commit to origin
     $ belly c -m "Made some awesome changes"
 
-    Switch to last branch or switch to / create a branch with a specific name
-    $ belly s [<branch-name>]
+    Switch to last branch or switch to/create a branch with a specific name
+    $ belly s [some-branch]
 
     Tag and annotate the current commit with a version number
     and push the tag to origin
-    $ belly t <version-number>
+    $ belly t 1.4.2
 
     Rename the current branch locally and on origin
-    $ belly n <new-branch-name>
+    $ belly n some-branch
 
     Squash all commits since master
-    $ belly q -m "<commit-message>"
+    $ belly q -m "Made some awesome changes"
 ```
 
 

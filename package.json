@@ -10,7 +10,9 @@
 		"url": "https://www.kahlillechelt.com"
 	},
 	"bin": {
-		"gx": "cli.js"
+		"belly": "cli.js",
+		"gut": "cli.js",
+		"b": "cli.js"
 	},
 	"engines": {
 		"node": ">=6"
@@ -38,9 +40,11 @@
 		"xo": "^0.21.0"
 	},
 	"xo": {
-    "space": true,
-    "rules": {
-      "unicorn/no-process-exit": false
-    }
+		"space": true,
+		"rules": {
+      "unicorn/no-process-exit": 0,
+      "unicorn/filename-case": 0,
+      "no-warning-comments": 0
+		}
 	}
 }
