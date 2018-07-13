@@ -2,19 +2,24 @@
 'use strict';
 
 const meow = require('meow');
-const gx = require('./lib/belly');
+const belly = require('./lib/belly');
 const {cliHelp} = require('./lib/texts');
 
 const config = {
   flags: {
     commitMessage: {
       type: 'string',
-      default: `gx auto-commit`,
+      default: `belly auto-commit`,
       alias: 'm'
+    },
+    push: {
+      type: 'boolean',
+      default: true,
+      alias: 'p'
     }
   }
 };
 
 const cli = meow(cliHelp, config);
 
-gx(cli);
+belly(cli);
