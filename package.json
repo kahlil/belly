@@ -1,6 +1,6 @@
 {
 	"name": "belly",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "",
 	"license": "MIT",
 	"repository": "kahlil/belly",
@@ -20,8 +20,8 @@
 		"test": "xo && ava"
 	},
 	"files": [
-    "cli.js",
-    "lib/*"
+		"cli.js",
+		"lib/*"
 	],
 	"keywords": [
 		"cli",
