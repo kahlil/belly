@@ -1,16 +1,18 @@
 {
-	"name": "@kahlil/gx",
+	"name": "belly",
 	"version": "1.0.0",
 	"description": "",
 	"license": "MIT",
-	"repository": "kahlil/g",
+	"repository": "kahlil/belly",
 	"author": {
 		"name": "Kahlil Lechelt",
 		"email": "hello@kahlil.info",
 		"url": "https://www.kahlillechelt.com"
 	},
 	"bin": {
-		"gx": "cli.js"
+		"belly": "cli.js",
+		"gut": "cli.js",
+		"b": "cli.js"
 	},
 	"engines": {
 		"node": ">=6"
@@ -27,12 +29,22 @@
 		"git"
 	],
 	"dependencies": {
+		"chalk": "^2.4.1",
 		"meow": "^5.0.0",
+		"ora": "^2.1.0",
 		"simple-git": "^1.96.0"
 	},
 	"devDependencies": {
 		"ava": "^0.25.0",
 		"execa": "^0.10.0",
 		"xo": "^0.21.0"
+	},
+	"xo": {
+		"space": true,
+		"rules": {
+      "unicorn/no-process-exit": 0,
+      "unicorn/filename-case": 0,
+      "no-warning-comments": 0
+		}
 	}
 }

@@ -1,19 +1,20 @@
 #!/usr/bin/env node
 'use strict';
+
 const meow = require('meow');
+const gx = require('./lib/belly');
+const {cliHelp} = require('./lib/texts');
 
-const cli = meow(`
-	Usage
-	  $ g [input]
+const config = {
+  flags: {
+    commitMessage: {
+      type: 'string',
+      default: `gx auto-commit`,
+      alias: 'm'
+    }
+  }
+};
 
-	Options
-	  --foo  Lorem ipsum [Default: false]
+const cli = meow(cliHelp, config);
 
-	Examples
-	  $ g
-	  unicorns & rainbows
-	  $ g ponies
-	  ponies & rainbows
-`);
-
-console.log(cli.input[0] || 'unicorns');
+gx(cli);
