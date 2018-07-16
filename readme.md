@@ -45,6 +45,10 @@ $ belly --help
     $ belly q -m "Made some awesome changes"
 ```
 
+## Why is "belly"?
+When looking for a name I started with `git-shortcuts` which was to long
+so I shortened it to `g-cuts`. Still too long. `guts` was cool but a little
+disgusting so: `guts` → `belly`.
 
 ## License
 
