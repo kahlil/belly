@@ -66,7 +66,7 @@ _Rebase the current branch on to `origin/master` and if it doesn't fail, squash 
 
 If your team wants to keep a clean Git history you will most likely have to rebase your branch on a regular basis and squash your commits into one commit per feature.
 
-`belly q` is here to help! The command will `fetch origin`, then rebase your current branch on to `origin/master` just to make sure you rebased. Then it will do a `reset --soft` back to `origin/master` and then commit all your changes with either an auto-commit message or the commit message you specified with `-m`.
+`belly q` is here to help! The command will rebase your current branch on to `master` just to make sure you rebased (you have to make sure your master ist up-to-date). Then it will do a `reset --soft` back to `master` and then commit all your changes with either an auto-commit message or the commit message you specified with `-m`.
 
 ### `belly p`
 
