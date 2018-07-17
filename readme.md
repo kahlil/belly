@@ -68,6 +68,10 @@ If your team wants to keep a clean Git history you will most likely have to reba
 
 `belly q` is here to help! The command will `fetch origin`, then rebase your current branch on to `origin/master` just to make sure you rebased. Then it will do a `reset --soft` back to `origin/master` and then commit all your changes with either an auto-commit message or the commit message you specified with `-m`.
 
+### `belly p`
+
+If you work with rebasing and squashing in feature branches a lot, you have to force-push a lot. Instead of using `push --force` it is recommended to use `push --force-with-lease`. `belly p` gives you a nice shortcut for doing a `--force-with-lease` push. Make sure you understand [the ways how `--force-with-lease` can fail you though](https://developer.atlassian.com/blog/2015/04/force-with-lease/).
+
 ## Usage
 
 ```
@@ -101,6 +105,10 @@ $ [belly | b] --help
 
     Squash all commits since master
     $ belly q -m "Made some awesome changes"
+
+    Force push with `--force-with-lease`
+    $ belly p
+
 ```
 
 ## Why "belly"?
