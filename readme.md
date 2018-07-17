@@ -11,14 +11,11 @@ $ npm install --global belly
 
 ## Why?
 
-There are a few things in Git that I do a lot. They involve
-typing multiple commands. I was tired of typing them all the time so I made
-this tool to make my Git workflows more convenient.
+There are a few things in Git that I do a lot. Some things I need in regular intervals but I always have to look up the commands. So I created this CLI tool to simplify the Git tasks I need the most.
 
 ## Why Not Use Git Aliases?
 
-Sure, I could have done that but I wanted to have something a bit more portable, shareable and
-easier to install.
+Sure, I could have used Git aliases but I wanted to have something a bit more portable and shareable.
 
 ## OK, So What Does It Do?
 
@@ -48,6 +45,11 @@ Why do we need multiple commands for that?
 `belly s` does it all. If you don't specify a branch name it just switches to the last branch
 you were on. If you specify a branch name of an existing branch like: `belly s branch-name`, it will switch to that. If the branch doesn't exist it will create it and switch to it.
 
+### Tag the current commit with a version number and push tags to the server: `belly t`
+
+In order to annotated-tag the current commit with a version number and push the tag to the server use `belly t <version-number>`.
+
+###
 
 ## Usage
 
