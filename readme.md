@@ -2,7 +2,6 @@
 
 > Git shortcuts for common tasks.
 
-
 ## Install
 
 ```
@@ -21,7 +20,7 @@ Sure, I could have used Git aliases but I wanted to have something a bit more po
 
 I thought you'd never ask!
 
-### `belly c`
+### `belly c [-m <commit message>]`
 
 _Stage everything, commit everything and push to origin._
 
@@ -37,7 +36,7 @@ Sometimes it's fine to just commit with a generic commit message.
 Especially if it is minor work, you're the only person working on
 the project or if you'll squash all commits in the end anyway.
 
-### `belly s`
+### `belly s [branch-name]`
 
 _Switch to the last branch or to an existing branch or create a new branch._
 
@@ -49,17 +48,17 @@ Why do we need multiple commands for that?
 `belly s` does it all. If you don't specify a branch name it just switches to the last branch
 you were on. If you specify a branch name of an existing branch like: `belly s branch-name`, it will switch to that. If the branch doesn't exist it will create it and switch to it.
 
-### `belly t`
+### `belly t <version.number>`
 
 _Tag the current commit with a version number and push tags to the server._
 
 In order to annotated-tag the current commit with a version number and push the tag to the server use `belly t <version-number>`.
 
-### `belly n <branch-name>`
+### `belly n <new-branch-name>`
 
 _Rename your local and your remote branch in one go._
 
-`belly n <branch-name>` will rename your local branch with `-m <branch-name>`, then delete your remote branch with `push :<current-branch-name>` and push the new branch to the server with `push -u <new-branch-name>`.
+`belly n <new-branch-name>` will rename your local branch with `-m <new-branch-name>`, then delete your remote branch with `push :<current-branch-name>` and push the new branch to the server with `push -u <new-branch-name>`.
 
 ### `belly q -m <commit-message>`
 
@@ -68,6 +67,10 @@ _Rebase the current branch on to `origin/master` and if it doesn't fail, squash 
 If your team wants to keep a clean Git history you will most likely have to rebase your branch on a regular basis and squash your commits into one commit per feature.
 
 `belly q` is here to help! The command will `fetch origin`, then rebase your current branch on to `origin/master` just to make sure you rebased. Then it will do a `reset --soft` back to `origin/master` and then commit all your changes with either an auto-commit message or the commit message you specified with `-m`.
+
+### `belly p`
+
+If you work with rebasing and squashing in feature branches a lot, you have to force-push a lot. Instead of using `push --force` it is recommended to use `push --force-with-lease`. `belly p` gives you a nice shortcut for doing a `--force-with-lease` push. Make sure you understand [the ways how `--force-with-lease` can fail you though](https://developer.atlassian.com/blog/2015/04/force-with-lease/).
 
 ## Usage
 
@@ -102,6 +105,10 @@ $ [belly | b] --help
 
     Squash all commits since master
     $ belly q -m "Made some awesome changes"
+
+    Force push with `--force-with-lease`
+    $ belly p
+
 ```
 
 ## Why "belly"?
