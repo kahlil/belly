@@ -21,7 +21,9 @@ Sure, I could have used Git aliases but I wanted to have something a bit more po
 
 I thought you'd never ask!
 
-### Stage Everything, Commit Everything & Push To Origin: `belly c`
+### `belly c`
+
+> Stage everything, commit everything and push to origin.
 
 I do this a lot. I commit early and often in my feature branches and
 always push it to the server. That is what `belly c` does.
@@ -35,7 +37,9 @@ Sometimes it's fine to just commit with a generic commit message.
 Especially if it is minor work, you're the only person working on
 the project or if you'll squash all commits in the end anyway.
 
-### Switch To The Last Branch Or To An Existing Branch Or Create A New Branch: `belly s`
+### `belly s`
+
+> Switch to the last branch or to an existing branch or create a new branch.
 
 When we navigate between branches we typically either want to switch to an existing branch or
 create a new one and switch to that one.
@@ -45,15 +49,21 @@ Why do we need multiple commands for that?
 `belly s` does it all. If you don't specify a branch name it just switches to the last branch
 you were on. If you specify a branch name of an existing branch like: `belly s branch-name`, it will switch to that. If the branch doesn't exist it will create it and switch to it.
 
-### Tag the current commit with a version number and push tags to the server: `belly t`
+### `belly t`
+
+> Tag the current commit with a version number and push tags to the server.
 
 In order to annotated-tag the current commit with a version number and push the tag to the server use `belly t <version-number>`.
 
-### Rename your local and your remote branch in one go: `belly n <branch-name>`
+### `belly n <branch-name>`
+
+> Rename your local and your remote branch in one go.
 
 `belly n <branch-name>` will rename your local branch with `-m <branch-name>`, then delete your remote branch with `push :<current-branch-name>` and push the new branch to the server with `push -u <new-branch-name>`.
 
-### Rebase the current branch on to `origin/master` and if it doesn't fail, squash the branch: `belly q -m <commit-message>`
+### `belly q -m <commit-message>`
+
+> Rebase the current branch on to `origin/master` and if it doesn't fail, squash the branch. 
 
 If your team wants to keep a clean Git history you will most likely have to rebase your branch on a regular basis and squash your commits into one commit per feature.
 
