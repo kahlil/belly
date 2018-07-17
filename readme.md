@@ -2,7 +2,6 @@
 
 > Git shortcuts for common tasks.
 
-
 ## Install
 
 ```
@@ -21,7 +20,7 @@ Sure, I could have used Git aliases but I wanted to have something a bit more po
 
 I thought you'd never ask!
 
-### `belly c`
+### `belly c [-m <commit message>]`
 
 _Stage everything, commit everything and push to origin._
 
@@ -37,7 +36,7 @@ Sometimes it's fine to just commit with a generic commit message.
 Especially if it is minor work, you're the only person working on
 the project or if you'll squash all commits in the end anyway.
 
-### `belly s`
+### `belly s [branch-name]`
 
 _Switch to the last branch or to an existing branch or create a new branch._
 
@@ -49,17 +48,17 @@ Why do we need multiple commands for that?
 `belly s` does it all. If you don't specify a branch name it just switches to the last branch
 you were on. If you specify a branch name of an existing branch like: `belly s branch-name`, it will switch to that. If the branch doesn't exist it will create it and switch to it.
 
-### `belly t`
+### `belly t <version.number>`
 
 _Tag the current commit with a version number and push tags to the server._
 
 In order to annotated-tag the current commit with a version number and push the tag to the server use `belly t <version-number>`.
 
-### `belly n <branch-name>`
+### `belly n <new-branch-name>`
 
 _Rename your local and your remote branch in one go._
 
-`belly n <branch-name>` will rename your local branch with `-m <branch-name>`, then delete your remote branch with `push :<current-branch-name>` and push the new branch to the server with `push -u <new-branch-name>`.
+`belly n <new-branch-name>` will rename your local branch with `-m <new-branch-name>`, then delete your remote branch with `push :<current-branch-name>` and push the new branch to the server with `push -u <new-branch-name>`.
 
 ### `belly q -m <commit-message>`
 
