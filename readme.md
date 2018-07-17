@@ -24,7 +24,7 @@ easier to install.
 
 I thought you'd never ask!
 
-### `belly c`: Stage Everything, Commit Everything & Push To Origin
+### Stage Everything, Commit Everything & Push To Origin: `belly c`
 
 I do this a lot. I commit early and often in my feature branches and
 always push it to the server. That is what `belly c` does.
