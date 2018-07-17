@@ -23,7 +23,7 @@ I thought you'd never ask!
 
 ### `belly c`
 
-> Stage everything, commit everything and push to origin.
+_Stage everything, commit everything and push to origin._
 
 I do this a lot. I commit early and often in my feature branches and
 always push it to the server. That is what `belly c` does.
@@ -39,7 +39,7 @@ the project or if you'll squash all commits in the end anyway.
 
 ### `belly s`
 
-> Switch to the last branch or to an existing branch or create a new branch.
+_Switch to the last branch or to an existing branch or create a new branch._
 
 When we navigate between branches we typically either want to switch to an existing branch or
 create a new one and switch to that one.
@@ -51,19 +51,19 @@ you were on. If you specify a branch name of an existing branch like: `belly s b
 
 ### `belly t`
 
-> Tag the current commit with a version number and push tags to the server.
+_Tag the current commit with a version number and push tags to the server._
 
 In order to annotated-tag the current commit with a version number and push the tag to the server use `belly t <version-number>`.
 
 ### `belly n <branch-name>`
 
-> Rename your local and your remote branch in one go.
+_Rename your local and your remote branch in one go._
 
 `belly n <branch-name>` will rename your local branch with `-m <branch-name>`, then delete your remote branch with `push :<current-branch-name>` and push the new branch to the server with `push -u <new-branch-name>`.
 
 ### `belly q -m <commit-message>`
 
-> Rebase the current branch on to `origin/master` and if it doesn't fail, squash the branch. 
+_Rebase the current branch on to `origin/master` and if it doesn't fail, squash the branch._
 
 If your team wants to keep a clean Git history you will most likely have to rebase your branch on a regular basis and squash your commits into one commit per feature.
 
