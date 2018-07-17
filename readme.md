@@ -38,7 +38,7 @@ Sometimes it's fine to just commit with a generic commit message.
 Especially if it is minor work, you're the only person working on
 the project or if you'll squash all commits in the end anyway.
 
-### `belly s`: Switch To The Last Branch Or To An Existing Branch Or Create A New Branch
+### Switch To The Last Branch Or To An Existing Branch Or Create A New Branch: `belly s`
 
 When we navigate between branches we typically either want to switch to an existing branch or
 create a new one and switch to that one.
