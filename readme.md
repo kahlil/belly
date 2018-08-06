@@ -61,13 +61,13 @@ _Rename your local and your remote branch in one go._
 
 `belly n <new-branch-name>` will rename your local branch with `-m <new-branch-name>`, then delete your remote branch with `push :<current-branch-name>` and push the new branch to the server with `push -u <new-branch-name>`.
 
-### `belly q -m <commit-message>`
+### `belly q <commit-message>`
 
 _Rebase the current branch on to `origin/master` and if it doesn't fail, squash the branch._
 
 If your team wants to keep a clean Git history you will most likely have to rebase your branch on a regular basis and squash your commits into one commit per feature.
 
-`belly q` is here to help! The command will rebase your current branch on to `master` just to make sure you rebased (you have to make sure your master ist up-to-date). Then it will do a `reset --soft` back to `master` and then commit all your changes with either an auto-commit message or the commit message you specified with `-m`.
+`belly q` is here to help! The command will rebase your current branch on to `master` just to make sure you rebased (you have to make sure your master ist up-to-date). Then it will do a `reset --soft` back to `master` and then commit all your changes with the commit message you specified after `q`.
 
 ### `belly p`
 
