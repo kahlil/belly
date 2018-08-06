@@ -14,7 +14,7 @@ There are a few things in Git that I do a lot. Some things I need in regular int
 
 ## Why Not Use Git Aliases?
 
-Sure, I could have used Git aliases but I wanted to have something a bit more portable and shareable.
+Sure, I could have used Git aliases but I wanted to have something that I can install with npm and I didn't want to be confined to Git aliases.
 
 ## OK, So What Does It Do?
 
