@@ -20,7 +20,7 @@ Sure, I could have used Git aliases but I wanted to have something a bit more po
 
 I thought you'd never ask!
 
-### `belly c [-m <commit message>]`
+### `belly c [<commit message>]`
 
 _Stage everything, commit everything and push to origin._
 
@@ -30,13 +30,13 @@ always push it to the server. That is what `belly c` does.
 Type `belly c` and belly will stage everything, commit it with the
 commit message `belly auto-commit` and push it to origin.
 
-You can specify a commit message with `-m`.
+You can specify a commit message by adding it right after the `c`.
 
 Sometimes it's fine to just commit with a generic commit message.
 Especially if it is minor work, you're the only person working on
 the project or if you'll squash all commits in the end anyway.
 
-### `belly s [branch-name]`
+### `belly s [<branch-name>]`
 
 _Switch to the last branch or to an existing branch or create a new branch._
 
@@ -48,11 +48,12 @@ Why do we need multiple commands for that?
 `belly s` does it all. If you don't specify a branch name it just switches to the last branch
 you were on. If you specify a branch name of an existing branch like: `belly s branch-name`, it will switch to that. If the branch doesn't exist it will create it and switch to it.
 
-### `belly t <version.number>`
+### `belly t <version.number> [-d]`
 
 _Tag the current commit with a version number and push tags to the server._
 
 In order to annotated-tag the current commit with a version number and push the tag to the server use `belly t <version-number>`.
+You can delete a tag locally and remotely in one go by adding `-d` at the end.
 
 ### `belly n <new-branch-name>`
 
