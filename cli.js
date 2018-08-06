@@ -9,13 +9,18 @@ const config = {
   flags: {
     commitMessage: {
       type: 'string',
-      default: `belly auto-commit`,
+      default: undefined,
       alias: 'm'
     },
     push: {
       type: 'boolean',
       default: true,
       alias: 'p'
+    },
+    del: {
+      type: 'boolean',
+      default: false,
+      alias: 'd'
     }
   }
 };
