@@ -14,7 +14,7 @@ There are a few things in Git that I do a lot. Some things I need in regular int
 
 ## Why Not Use Git Aliases?
 
-Sure, I could have used Git aliases but I wanted to have something that I can install with npm and I didn't want to be confined to Git aliases.
+Sure, I could have used Git aliases but I wanted to have something that I can install with npm and I didn't want to be confined to Git aliases. This way I can add some nice visual feedback on the console.
 
 ## OK, So What Does It Do?
 
@@ -63,11 +63,11 @@ _Rename your local and your remote branch in one go._
 
 ### `belly q <commit-message>`
 
-_Rebase the current branch on to `origin/master` and if it doesn't fail, squash the branch._
+_Fetch origin master, rebase the current branch on to `origin/master` and if it doesn't fail, squash the branch._
 
 If your team wants to keep a clean Git history you will most likely have to rebase your branch on a regular basis and squash your commits into one commit per feature.
 
-`belly q` is here to help! The command will rebase your current branch on to `master` just to make sure you rebased (you have to make sure your master ist up-to-date). Then it will do a `reset --soft` back to `master` and then commit all your changes with the commit message you specified after `q`.
+`belly q` is here to help! The command will rebase your current branch on to `master` just to make sure you rebased (you have to make sure your master is up-to-date). Then it will do a `reset --soft` back to `master` and then commit all your changes with the commit message you specified after `q`.
 
 ### `belly p`
 
@@ -82,8 +82,8 @@ $ [belly | b] --help
     $ belly [c | s | t | n | q]
 
   Options
-    --help                           Display this message
-    --message -m "<commit message>"  Add a custom commit message
+    --help       Display this message
+    --del or -d  Use this flag in combination with the t command to delete a tag locally and remotely
 
   Examples
     Commit all staged and unstaged changes with a generic
@@ -92,7 +92,7 @@ $ [belly | b] --help
 
     Commit all staged and unstaged changes with a custom
     commit message and push the commit to origin
-    $ belly c -m "Made some awesome changes"
+    $ belly c Made some awesome changes
 
     Switch to last branch or switch to/create a branch with a specific name
     $ belly s [some-branch]
@@ -101,11 +101,14 @@ $ [belly | b] --help
     and push the tag to origin
     $ belly t 1.4.2
 
+    Delete a tag locally and on the server
+    $ belly t 1.4.2 -d
+
     Rename the current branch locally and on origin
     $ belly n some-branch
 
     Squash all commits since master
-    $ belly q -m "Made some awesome changes"
+    $ belly q Made some awesome changes
 
     Force push with `--force-with-lease`
     $ belly p
