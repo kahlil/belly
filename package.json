@@ -29,7 +29,7 @@
     "git"
   ],
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "meow": "^5.0.0",
     "ora": "^3.2.0",
     "read-pkg": "^4.0.1",
