@@ -41,5 +41,9 @@
     "execa": "1.0.0",
     "prettier": "1.19.1"
   },
-  "prettier": {}
+  "prettier": {},
+  "volta": {
+    "node": "12.14.1",
+    "yarn": "1.21.1"
+  }
 }
