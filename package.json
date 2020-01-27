@@ -29,17 +29,17 @@
     "git"
   ],
   "dependencies": {
-    "chalk": "^3.0.0",
-    "meow": "^5.0.0",
-    "ora": "^3.2.0",
-    "read-pkg": "^4.0.1",
-    "simple-git": "^1.107.0",
-    "write-pkg": "^3.2.0"
+    "chalk": "3.0.0",
+    "meow": "5.0.0",
+    "ora": "3.2.0",
+    "read-pkg": "4.0.1",
+    "simple-git": "1.107.0",
+    "write-pkg": "3.2.0"
   },
   "devDependencies": {
-    "ava": "^1.2.1",
-    "execa": "^1.0.0",
-    "xo": "^0.24.0"
+    "ava": "1.2.1",
+    "execa": "1.0.0",
+    "xo": "0.24.0"
   },
   "xo": {
     "space": true,
