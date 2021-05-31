@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "ava": "1.2.1",
-    "execa": "4.0.0",
+    "execa": "5.0.1",
     "prettier": "1.19.1"
   },
   "prettier": {},
